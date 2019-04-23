@@ -1,0 +1,29 @@
+package com.shop.repository;
+
+import java.sql.SQLException;
+
+public class GoodProducers extends BaseTable implements TableOperation {
+
+    static final String TABLE_NAME = "good_producers";
+
+    public GoodProducers() throws SQLException {
+    }
+
+    @Override
+    public void createTable() {
+        super.executeSqlStatement("CREATE TABLE " + TABLE_NAME + " (" +
+                "id SERIAL PRIMARY KEY, " +
+                "name VARCHAR(45) NOT NULL)",
+                "Table "+ TABLE_NAME + " has been created");
+    }
+
+    @Override
+    public void createForeignKey() {
+
+    }
+
+    @Override
+    public void createConstraint() {
+
+    }
+}
